@@ -9,8 +9,11 @@ class TweetDetailView(DetailView):
     # template_name = "tweets/tweet_detail_view.html"
     queryset = Tweet.objects.all()
 
-    def get_object(self):
-        return Tweet.objects.get(id=1)
+    # def get_object(self):
+    #     print(self.kwargs)
+    #     pk = self.kwargs.get("pk")
+    #     print(pk)
+    #     return Tweet.objects.get(id=pk)
 
 class TweetListView(ListView):
     # template_name ="tweets/list_view.html"
